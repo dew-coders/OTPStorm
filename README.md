@@ -1,20 +1,24 @@
-# <a style="font-family:cursive">MySPAMBot-OTP WORK 1000% FOR ID NUMBER!!</a>
-<p align="justify">Anda punya masalah sama bocil di komen? Atau Anda sedang adu bacot sama fans club bola sebelah? <b>MySPAMBot-OTP</b> solusinya!! <b>MySPAMBot-OTP</b> adalah sebuah aplikasi prank yang menggunakan sebuah BOT untuk melakukan requests berulang kali sehingga target akan dikirimi pesan OTP bertubi-tubi. Aplikasi ini ditujukan sebagai bahan belajar (Open Source) menggunakan modul Requests dan implementasi HTTPS tools di Python.</p>
+# <a style="font-family:cursive">OTPStorm - OTP Spam Tool WORK 1000% FOR ID NUMBER!!</a>
+<p align="justify">
+Got annoyed by kids in the comments section? Or arguing with rival football fan clubs? <b>OTPStorm</b> is the solution!! 
+<b>OTPStorm</b> is a prank application that uses a BOT to make repeated requests, flooding the target with OTP messages. 
+This application is intended as an open-source learning material using the Requests module and HTTPS tools implementation in Python.
+</p>
 <br>
 
-# Testimoni 😂😂
-Terdapat Error Handling sehingga ketika di-running bot tetap dapat terus berjalan walaupun ditinggal tidur. 
+# Testimonials 😂😂
+Built-in Error Handling so the bot keeps running even when you leave it overnight.
 <p align="center">
     <br>
     <a>
         <img src="https://telegra.ph/file/6a51a8a9776c4d36a406e.png">
     </a><br>
-    Korban 1<br> <br>
+    Victim 1<br> <br>
     <a>
         <img src="https://telegra.ph/file/517f5077ff6ec3b8da592.png">
         <img src="https://telegra.ph/file/164309a8ba0868fcce538.png">
     </a><br>
-    WhatsApp dan SMS    
+    WhatsApp and SMS    
 </p>
 <br>
 
@@ -34,39 +38,40 @@ Terdapat Error Handling sehingga ketika di-running bot tetap dapat terus berjala
 </p>
 <br>
 
-# Instalasi
-Sudah pasti require <b>[Python](https://www.python.org/downloads/)</b> , install <b>[Python](https://www.python.org/downloads/)</b> terlebih dahulu: <b>[Click Disini](https://www.python.org/downloads/)</b>
+# Installation
+Requires <b>[Python](https://www.python.org/downloads/)</b> to be installed first: <b>[Click Here](https://www.python.org/downloads/)</b>
 
 <br>
 
-### <p style="color:red">NOTE: Instalasi Dengan GIT</p> Jika kamu Programmer yang memiliki [GIT](https://git-scm.com/downloads) maka,
+### <p style="color:red">NOTE: Installation With GIT</p> If you are a developer with [GIT](https://git-scm.com/downloads) installed,
 
-- **Buka CMD / Command Prompt (atau terminal VSCode)**
+- **Open CMD / Command Prompt (or VSCode terminal)**
 
-- **Clone repository**
+- **Clone the repository**
 ```bash
-git clone https://github.com/rickyfazaa/MySPAMBot-OTP
+git clone https://github.com/dew-coders/OTPStorm
 ```
-- **Masuk kedalam directory**
+- **Enter the directory**
 ```sh
-cd MySPAMBot-OTP
+cd OTPStorm
 ```
-- **Jalankan main.py atau Ketik ini di Terminal ( CMD )**
+- **Run main.py or type this in Terminal (CMD)**
 ```bash
 python main.py
 ```
 <br>
 
-### <p style="color:red">NOTE: Instalasi Tanpa GIT</p> Jika kamu **TIDAK** memiliki [GIT](https://git-scm.com/downloads) maka,
-- **Download Manual:**
-[Download MySPAMBot-OTP](https://github.com/rickyfazaa/MySPAMBot-OTP/releases/download/v.1.0.9/MySPAMBot-OTP-v1.0.9-windows.rar) <br>
-- Extract **MySPAMBot-OTP-v1.0.9-windows.rar**
-- **Buka CMD / Command Prompt (atau terminal VSCode)**
-- **Ketik ini untuk masuk kedalam Folder MySPAMBot-OTP**
+### <p style="color:red">NOTE: Installation Without GIT</p> If you do **NOT** have [GIT](https://git-scm.com/downloads) installed,
+
+- **Manual Download:**
+[Download OTPStorm](https://github.com/dew-coders/OTPStorm/releases/download/v.1.0.9/OTPStorm-v1.0.9-windows.rar) <br>
+- Extract **OTPStorm-v1.0.9-windows.rar**
+- **Open CMD / Command Prompt (or VSCode terminal)**
+- **Type this to enter the OTPStorm folder**
 ```sh
-cd MySPAMBot-OTP
+cd OTPStorm
 ```
-- **Jalankan main.py atau Ketik ini di Terminal ( CMD )**
+- **Run main.py or type this in Terminal (CMD)**
 ```bash
 python main.py
 ```
@@ -80,6 +85,10 @@ python main.py
 
 
 ## Support Me 
-## (KALO ANDA SUKA JANGAN LUPA STAR NYA OK, BIAR GK KETINGGALAN UPDATE YGY)
-### [**My Instagram: @rickyfazaa**](https://www.instagram.com/rickyfazaa)    
-Untuk bertanya perihal tools bisa langsung dm [**Instagram**](https://www.instagram.com/rickyfazaa).
+## (IF YOU LIKE IT, DON'T FORGET TO STAR IT SO YOU DON'T MISS UPDATES YGY)
+### Created by: **Hansa Dewmina (Dew Coders)**    
+Original Repository: [**github.com/dew-coders**](https://github.com/dew-coders)
+<br>
+
+## License
+This project is for **educational purposes only**. Use at your own risk.
