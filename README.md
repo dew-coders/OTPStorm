@@ -6,37 +6,6 @@ This application is intended as an open-source learning material using the Reque
 </p>
 <br>
 
-# Testimonials 😂😂
-Built-in Error Handling so the bot keeps running even when you leave it overnight.
-<p align="center">
-    <br>
-    <a>
-        <img src="https://telegra.ph/file/6a51a8a9776c4d36a406e.png">
-    </a><br>
-    Victim 1<br> <br>
-    <a>
-        <img src="https://telegra.ph/file/517f5077ff6ec3b8da592.png">
-        <img src="https://telegra.ph/file/164309a8ba0868fcce538.png">
-    </a><br>
-    WhatsApp and SMS    
-</p>
-<br>
-
-
-## Video Tutorial 🚀
-**`Coming Soon`**
-
-<br>
-
-
-# v.1.0.9 (**3 November 2023**) WORK! ✔️✔️
-<p align="center">
-    <a>
-        <img src="https://telegra.ph/file/9a0918ad39ddc8efd986e.png">
-    </a><br>
-    Target: <b>Provider IM3</b> 
-</p>
-<br>
 
 # Installation
 Requires <b>[Python](https://www.python.org/downloads/)</b> to be installed first: <b>[Click Here](https://www.python.org/downloads/)</b>
