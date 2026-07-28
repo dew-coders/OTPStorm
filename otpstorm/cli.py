@@ -27,6 +27,7 @@ from otpstorm.providers.registry import ProviderRegistry
 # Ensure provider modules are loaded so they register themselves
 from otpstorm.providers import ictfromabc  # pylint: disable=unused-import
 from otpstorm.providers import swictlk  # pylint: disable=unused-import
+from otpstorm.providers import dmeducation  # pylint: disable=unused-import
 
 log = _get_logger("otpstorm.cli")
 
