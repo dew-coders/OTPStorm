@@ -1,63 +1,177 @@
-# <a style="font-family:cursive">OTPStorm - OTP Spam Tool WORK 1000% FOR ID NUMBER!!</a>
-<p align="justify">
-Got annoyed by kids in the comments section? Or arguing with rival football fan clubs? <b>OTPStorm</b> is the solution!! 
-<b>OTPStorm</b> is a prank application that uses a BOT to make repeated requests, flooding the target with OTP messages. 
-This application is intended as an open-source learning material using the Requests module and HTTPS tools implementation in Python.
+# ⚡ OTPStorm — OTP Flood Tool (ictfromabc)
+
+<p align="center">
+  <b>Clean · Single-Provider · Long-Term Support (LTS)</b>
 </p>
-<br>
 
+OTPStorm sends OTP verification messages to a target phone number using the
+**ictfromabc.com** API. Clean, structured, and easy to maintain.
 
-# Installation
-Requires <b>[Python](https://www.python.org/downloads/)</b> to be installed first: <b>[Click Here](https://www.python.org/downloads/)</b>
+> ⚠ **For educational purposes only.** Use only on numbers you own or have
+> explicit permission to test. Misuse may violate applicable laws.
 
-<br>
+---
 
-### <p style="color:red">NOTE: Installation With GIT</p> If you are a developer with [GIT](https://git-scm.com/downloads) installed,
+## ✨ Features
 
-- **Open CMD / Command Prompt (or VSCode terminal)**
+| Feature | Description |
+|---|---|
+| **1 Active Provider** | `ictfromabc` — POST to `https://ictfromabc.com/api/request-otp-v2/{phone}` |
+| **CLI & Interactive** | Run with arguments or in interactive menu mode |
+| **Loop Mode** | Automatically repeat attacks with configurable delay |
+| **Countdown Timer** | Displays time until next attack cycle |
+| **Config File** | JSON config file support (`otpstorm_config.json`) |
+| **Logging** | File + console logging with levels (DEBUG, INFO, etc.) |
 
-- **Clone the repository**
+---
+
+## 🚀 Quick Start
+
+### Requirements
+- Python **3.8+**
+- `pip` (Python package installer)
+
+### Install Dependencies
+
 ```bash
-git clone https://github.com/dew-coders/OTPStorm
+# On most systems:
+pip install -r requirements.txt
+
+# On Kali/Debian (PEP 668), use a virtual environment:
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
-- **Enter the directory**
-```sh
-cd OTPStorm
-```
-- **Run main.py or type this in Terminal (CMD)**
+
+### Run
+
 ```bash
+# Interactive mode (recommended)
 python main.py
-```
-<br>
 
-### <p style="color:red">NOTE: Installation Without GIT</p> If you do **NOT** have [GIT](https://git-scm.com/downloads) installed,
+# Direct attack — single cycle
+python main.py 0701515602
 
-- **Manual Download:**
-[Download OTPStorm](https://github.com/dew-coders/OTPStorm/releases/download/v.1.0.9/OTPStorm-v1.0.9-windows.rar) <br>
-- Extract **OTPStorm-v1.0.9-windows.rar**
-- **Open CMD / Command Prompt (or VSCode terminal)**
-- **Type this to enter the OTPStorm folder**
-```sh
-cd OTPStorm
+# Multiple cycles with delay
+python main.py 0701515602 --loops 10 --delay 30
+
+# Quiet mode (only summary)
+python main.py 0701515602 --quiet
+
+# List registered providers
+python main.py --list-providers
+
+# Run as installed package
+python -m otpstorm 0701515602
 ```
-- **Run main.py or type this in Terminal (CMD)**
+
+### Install as a Package (optional)
+
 ```bash
-python main.py
+pip install -e .
+otpstorm 0701515602
 ```
-<br>
 
-## Dependencies 🚀
-**`Coming Soon`**
-<br>
+---
 
-<br>
+## 🏗️ Project Structure
 
+```
+OTPStorm/
+├── main.py                     # Entry point
+├── otpstorm/                   # Main package
+│   ├── __init__.py             # Package metadata
+│   ├── __main__.py             # `python -m otpstorm` support
+│   ├── cli.py                  # CLI argument parser & orchestration
+│   ├── config.py               # Configuration management
+│   ├── exceptions.py           # Custom exception hierarchy
+│   ├── logger.py               # Colored logging setup
+│   ├── utils.py                # Phone parsing, colors, animations
+│   └── providers/              # OTP provider implementations
+│       ├── __init__.py
+│       ├── base.py             # Abstract base provider class
+│       ├── registry.py         # Provider auto-registration system
+│       └── ictfromabc.py       # ictfromabc.com OTP provider
+├── requirements.txt            # Python dependencies
+├── pyproject.toml              # Modern packaging config
+├── setup.cfg                   # Legacy packaging config
+└── .gitignore                  # Python standard ignores
+```
 
-## Support Me 
-## (IF YOU LIKE IT, DON'T FORGET TO STAR IT SO YOU DON'T MISS UPDATES YGY)
-### Created by: **Hansa Dewmina (Dew Coders)**    
-Original Repository: [**github.com/dew-coders**](https://github.com/dew-coders)
-<br>
+---
 
-## License
+## 📱 Provider
+
+| Provider | Endpoint | Method |
+|---|---|---|
+| `ictfromabc` | `https://ictfromabc.com/api/request-otp-v2/{phone}` | POST |
+
+Tested working (HTTP 200, `{"msg": "OTP sent successfully"}`).
+
+---
+
+## ⚙️ Configuration
+
+Create `otpstorm_config.json` in the project directory:
+
+```json
+{
+  "timeout": 15,
+  "default_loops": 5,
+  "inter_loop_delay": 60,
+  "log_level": "INFO"
+}
+```
+
+Environment variables also work:
+
+| Variable | Config Key | Example |
+|---|---|---|
+| `OTPSTORM_TIMEOUT` | timeout | `10` |
+| `OTPSTORM_LOOPS` | default_loops | `3` |
+| `OTPSTORM_LOG_LEVEL` | log_level | `DEBUG` |
+
+---
+
+## 🧪 Adding a New Provider
+
+1. Create a new file in `otpstorm/providers/` (e.g., `myprov.py`)
+2. Subclass `BaseProvider` and use the `@register_provider` decorator:
+
+```python
+from otpstorm.providers.base import BaseProvider
+from otpstorm.providers.registry import register_provider
+
+@register_provider
+class MyProvider(BaseProvider):
+    name = "myprovider"
+    description = "My Custom OTP Service"
+
+    def send(self, nomor, b, c):
+        response = self._make_request(
+            "POST", "https://api.example.com/otp",
+            data={"phone": nomor},
+        )
+        return {
+            "success": response.ok,
+            "status_code": response.status_code,
+            "message": "OTP sent" if response.ok else "Failed",
+            "response_text": self._truncate(response.text),
+        }
+```
+
+3. Import it in `otpstorm/providers/__init__.py` to auto-register.
+
+---
+
+## 📜 License
+
 This project is for **educational purposes only**. Use at your own risk.
+
+Original Repository: [github.com/dew-coders](https://github.com/dew-coders)
+
+---
+
+<p align="center">
+  Created with ❤️ by <b>Dew Coders</b>
+</p>

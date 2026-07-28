@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "otpstorm"
+version = "2.0.0"
+description = "Multi-Provider OTP Flood Tool"
+readme = "README.md"
+authors = [
+    {name = "Dew Coders"},
+]
+license = {text = "Educational Use Only"}
+keywords = ["otp", "spam", "flood", "pentest"]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.0",
+    "urllib3>=1.26.0",
+]
+
+[project.scripts]
+otpstorm = "otpstorm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["otpstorm*"]
